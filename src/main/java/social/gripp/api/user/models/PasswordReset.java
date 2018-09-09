@@ -52,7 +52,7 @@ public class PasswordReset {
 
     @Override
     public String toString() {
-        return "PasswordResetBean{" +
+        return "PasswordReset{" +
                 "userEmail='" + userEmail + '\'' +
                 ", resetToken='" + resetToken + '\'' +
                 ", newPassword='" + newPassword + '\'' +
