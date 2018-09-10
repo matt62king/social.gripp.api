@@ -6,9 +6,12 @@ import com.greenfrog.utils.datastore.fecher.annotaions.ToMany;
 import com.greenfrog.utils.datastore.mapper.annotations.Column;
 import com.greenfrog.utils.datastore.mapper.annotations.EntityKey;
 import com.greenfrog.utils.datastore.mapper.annotations.Provided;
+import com.greenfrog.utils.datastore.mapper.annotations.Store;
+import social.gripp.api.user.mappers.UserMapper;
 
 import java.util.List;
 
+@Store(value = "user", mapper = UserMapper.class, cache = true)
 public class User {
     @EntityKey
     private Key key;
