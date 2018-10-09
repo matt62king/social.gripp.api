@@ -16,7 +16,10 @@ public interface UserFeignService {
     ResponseEntity<User> getUser(@PathVariable("email") String email, @PathVariable("check") String check);
 
     @GetMapping("api/v1/user/create/check_email/{email:.+}")
-    ResponseEntity<String> checkUserEmail(@PathVariable("email") String email);
+    ResponseEntity<Boolean> checkUserEmail(@PathVariable("email") String email);
+
+    @GetMapping("api/v1/user/create/check_handle/{handle}")
+    ResponseEntity<Boolean> checkUserHandle(@PathVariable("handle") String handle);
 
     @PostMapping("api/v1/user/create")
     ResponseEntity<User> createUser(@RequestBody User user);
