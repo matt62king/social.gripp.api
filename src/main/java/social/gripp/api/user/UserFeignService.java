@@ -15,7 +15,7 @@ public interface UserFeignService {
     ResponseEntity<User> getUser(@PathVariable("email") String email, @PathVariable("check") String check);
 
     @ResponseBody
-    @GetMapping("api/v1/user/create/check_email/{email:.+}", , produces = "application/json")
+    @GetMapping("api/v1/user/create/check_email/{email:.+}", produces = "application/json")
     Map<String, Boolean> checkUserEmail(@PathVariable("email") String email);
 
     @ResponseBody
