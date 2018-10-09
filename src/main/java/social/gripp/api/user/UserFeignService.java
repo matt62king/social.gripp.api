@@ -5,8 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import social.gripp.api.user.models.PasswordReset;
 import social.gripp.api.user.models.User;
-
-import java.util.Map;
+import social.gripp.api.utils.responces.BooleanResponse;
 
 @FeignClient(value = "auth-server")
 public interface UserFeignService {
@@ -14,13 +13,11 @@ public interface UserFeignService {
     @GetMapping("api/v1/user/{email}/{check}")
     ResponseEntity<User> getUser(@PathVariable("email") String email, @PathVariable("check") String check);
 
-    @ResponseBody
-    @GetMapping(value = "api/v1/user/create/check_email/{email:.+}", produces = "application/json")
-    Map<String, Boolean> checkUserEmail(@PathVariable("email") String email);
+    @GetMapping("api/v1/user/create/check_email/{email:.+}")
+    ResponseEntity<BooleanResponse> checkUserEmail(@PathVariable("email") String email);
 
-    @ResponseBody
-    @GetMapping(value = "api/v1/user/create/check_handle/{handle}", produces = "application/json")
-    Map<String, Boolean> checkUserHandle(@PathVariable("handle") String handle);
+    @GetMapping("api/v1/user/create/check_handle/{handle}")
+    ResponseEntity<BooleanResponse> checkUserHandle(@PathVariable("handle") String handle);
 
     @PostMapping("api/v1/user/create")
     ResponseEntity<User> createUser(@RequestBody User user);
