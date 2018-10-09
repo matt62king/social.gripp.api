@@ -3,7 +3,7 @@ package social.gripp.api.utils.responces;
 public class BooleanResponse {
     private String boolValue;
 
-    BooleanResponse(Boolean value) {
+    public BooleanResponse(Boolean value) {
         this.boolValue = value.toString();
     }
 
