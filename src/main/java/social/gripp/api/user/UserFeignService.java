@@ -2,12 +2,11 @@ package social.gripp.api.user;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 import social.gripp.api.user.models.PasswordReset;
 import social.gripp.api.user.models.User;
+
+import java.util.Map;
 
 @FeignClient(value = "auth-server")
 public interface UserFeignService {
@@ -15,11 +14,13 @@ public interface UserFeignService {
     @GetMapping("api/v1/user/{email}/{check}")
     ResponseEntity<User> getUser(@PathVariable("email") String email, @PathVariable("check") String check);
 
+    @ResponseBody
     @GetMapping("api/v1/user/create/check_email/{email:.+}")
-    ResponseEntity<Boolean> checkUserEmail(@PathVariable("email") String email);
+    Map<String, Boolean> checkUserEmail(@PathVariable("email") String email);
 
+    @ResponseBody
     @GetMapping("api/v1/user/create/check_handle/{handle}")
-    ResponseEntity<Boolean> checkUserHandle(@PathVariable("handle") String handle);
+    Map<String, Boolean> checkUserHandle(@PathVariable("handle") String handle);
 
     @PostMapping("api/v1/user/create")
     ResponseEntity<User> createUser(@RequestBody User user);
