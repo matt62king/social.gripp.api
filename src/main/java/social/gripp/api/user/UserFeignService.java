@@ -15,11 +15,11 @@ public interface UserFeignService {
     ResponseEntity<User> getUser(@PathVariable("email") String email, @PathVariable("check") String check);
 
     @ResponseBody
-    @GetMapping("api/v1/user/create/check_email/{email:.+}")
+    @GetMapping("api/v1/user/create/check_email/{email:.+}", , produces = "application/json")
     Map<String, Boolean> checkUserEmail(@PathVariable("email") String email);
 
     @ResponseBody
-    @GetMapping("api/v1/user/create/check_handle/{handle}")
+    @GetMapping(value = "api/v1/user/create/check_handle/{handle}", produces = "application/json")
     Map<String, Boolean> checkUserHandle(@PathVariable("handle") String handle);
 
     @PostMapping("api/v1/user/create")
