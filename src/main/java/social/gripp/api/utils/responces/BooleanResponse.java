@@ -1,28 +1,24 @@
 package social.gripp.api.utils.responces;
 
 public class BooleanResponse {
-    private String boolValue;
+    Boolean boolValue;
 
-    public BooleanResponse(Boolean value) {
-        this.boolValue = value.toString();
+    public BooleanResponse(Boolean boolValue) {
+        this.boolValue = boolValue;
     }
 
-    public String getBoolValue() {
+    public Boolean getBoolValue() {
         return boolValue;
     }
 
-    public void setBoolValue(String boolValue) {
+    public void setBoolValue(Boolean boolValue) {
         this.boolValue = boolValue;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
         BooleanResponse that = (BooleanResponse) o;
 
@@ -37,7 +33,7 @@ public class BooleanResponse {
     @Override
     public String toString() {
         return "BooleanResponse{" +
-                "boolValue='" + boolValue + '\'' +
+                "boolValue=" + boolValue +
                 '}';
     }
 }
