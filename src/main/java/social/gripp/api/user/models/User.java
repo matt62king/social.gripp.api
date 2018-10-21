@@ -1,42 +1,18 @@
 package social.gripp.api.user.models;
 
-import com.google.cloud.datastore.Key;
-import com.greenfrog.utils.datastore.fecher.annotaions.IndexedID;
-import com.greenfrog.utils.datastore.fecher.annotaions.ToMany;
-import com.greenfrog.utils.datastore.mapper.annotations.Column;
-import com.greenfrog.utils.datastore.mapper.annotations.EntityKey;
-import com.greenfrog.utils.datastore.mapper.annotations.Provided;
-import com.greenfrog.utils.datastore.mapper.annotations.Store;
-import social.gripp.api.user.mappers.UserMapper;
+import social.gripp.api.constraints.Authority;
 
+import java.io.Serializable;
 import java.util.List;
 
-@Store(value = "user", mapper = UserMapper.class, cache = true)
-public class User {
-    @EntityKey
-    private Key key;
+public class User implements Serializable {
 
-    @Column("user_handle")
+    private static final long serialVersionUID = 1L;
+
     private String handle;
-
-    @IndexedID
-    @Column("user_email")
     private String email;
-
-    @Provided(out = false)
-    @Column("user_password")
     private String password;
-
-    @ToMany(UserAuthority.class)
-    private List<UserAuthority> userAuthorities;
-
-    public Key getKey() {
-        return key;
-    }
-
-    public void setKey(Key key) {
-        this.key = key;
-    }
+    private List<Authority> userAuthorities;
 
     public String getHandle() {
         return handle;
@@ -62,11 +38,11 @@ public class User {
         this.password = password;
     }
 
-    public List<UserAuthority> getUserAuthorities() {
+    public List<Authority> getUserAuthorities() {
         return userAuthorities;
     }
 
-    public void setUserAuthorities(List<UserAuthority> userAuthorities) {
+    public void setUserAuthorities(List<Authority> userAuthorities) {
         this.userAuthorities = userAuthorities;
     }
 
@@ -75,19 +51,17 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        User userBean = (User) o;
+        User user = (User) o;
 
-        if (key != null ? !key.equals(userBean.key) : userBean.key != null) return false;
-        if (handle != null ? !handle.equals(userBean.handle) : userBean.handle != null) return false;
-        if (email != null ? !email.equals(userBean.email) : userBean.email != null) return false;
-        if (password != null ? !password.equals(userBean.password) : userBean.password != null) return false;
-        return userAuthorities != null ? userAuthorities.equals(userBean.userAuthorities) : userBean.userAuthorities == null;
+        if (handle != null ? !handle.equals(user.handle) : user.handle != null) return false;
+        if (email != null ? !email.equals(user.email) : user.email != null) return false;
+        if (password != null ? !password.equals(user.password) : user.password != null) return false;
+        return userAuthorities != null ? userAuthorities.equals(user.userAuthorities) : user.userAuthorities == null;
     }
 
     @Override
     public int hashCode() {
-        int result = key != null ? key.hashCode() : 0;
-        result = 31 * result + (handle != null ? handle.hashCode() : 0);
+        int result = handle != null ? handle.hashCode() : 0;
         result = 31 * result + (email != null ? email.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + (userAuthorities != null ? userAuthorities.hashCode() : 0);
@@ -96,9 +70,8 @@ public class User {
 
     @Override
     public String toString() {
-        return "UserBean{" +
-                "key=" + key +
-                ", handle='" + handle + '\'' +
+        return "User{" +
+                "handle='" + handle + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", userAuthorities=" + userAuthorities +
