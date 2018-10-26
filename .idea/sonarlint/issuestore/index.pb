@@ -20,3 +20,7 @@ m
 =src/main/java/social/gripp/api/user/models/PasswordReset.java,0/5/05c848fa57c9169c69bb25c99a07eef3f87e2987
 s
 Csrc/main/java/social/gripp/api/utils/responces/BooleanResponse.java,1/1/1126e447f0fd626278fd611e2c910d6e7be8a7f1
+k
+;src/main/java/social/gripp/api/projects/models/Project.java,8/6/864000d63a9a3b0e10ed3d24389e694f7ca3394f
+q
+Asrc/main/java/social/gripp/api/projects/ProjectsFeignService.java,b/2/b2be7a901e544a981acc75aa9b65bdeefe9426c2
