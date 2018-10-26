@@ -1,21 +1,20 @@
 package social.gripp.api.projects.models;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 public class Project implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private UUID id;
+    private String id;
     private String owner;
     private String projectName;
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -58,7 +57,7 @@ public class Project implements Serializable {
     @Override
     public String toString() {
         return "Project{" +
-                "id=" + id +
+                "id='" + id + '\'' +
                 ", owner='" + owner + '\'' +
                 ", projectName='" + projectName + '\'' +
                 '}';
