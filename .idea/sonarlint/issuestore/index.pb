@@ -24,3 +24,7 @@ k
 ;src/main/java/social/gripp/api/projects/models/Project.java,8/6/864000d63a9a3b0e10ed3d24389e694f7ca3394f
 q
 Asrc/main/java/social/gripp/api/projects/ProjectsFeignService.java,b/2/b2be7a901e544a981acc75aa9b65bdeefe9426c2
+s
+Csrc/main/java/social/gripp/api/user/GitHubUserAuthFeignService.java,8/0/805afbcac765dac0d2b53667ac9019be6066d682
+n
+>src/main/java/social/gripp/api/user/models/GitHubUserAuth.java,6/2/62f2a7d9ee06c22c895e6626f5c7efcd107d8d41
