@@ -9,8 +9,8 @@ import social.gripp.api.user.models.User;
 @FeignClient(value = "auth-server")
 public interface UserFeignService {
 
-    @GetMapping("api/v1/user/{email:.+}")
-    ResponseEntity<User> getUser(@PathVariable("email") String email);
+    @GetMapping("api/v1/user/{email}/{secured}")
+    ResponseEntity<User> getUser(@PathVariable("email") String email, @PathVariable("secured") String secured);
 
     @GetMapping("api/v1/user/create/check_email/{email:.+}")
     ResponseEntity<String> checkUserEmail(@PathVariable("email") String email);
