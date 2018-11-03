@@ -12,5 +12,5 @@ import java.util.List;
 public interface GitHubRepoProxyService {
 
     @GetMapping("api/v1/projects/repos/{email}/{token}")
-    ResponseEntity<List<GitHubRepo>> getUserRepos(@PathVariable("email") String email, @PathVariable("token") String token);
+    ResponseEntity<List<GitHubRepo>> getUserRepos(@PathVariable("email") String email);
 }

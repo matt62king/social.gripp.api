@@ -8,6 +8,7 @@ public class GitHubRepo implements Serializable {
 
     private String id;
     private String name;
+    private String fullName;
     private String defaultBranch;
     private Boolean isPrivate;
 
@@ -35,6 +36,14 @@ public class GitHubRepo implements Serializable {
         this.defaultBranch = defaultBranch;
     }
 
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
     public Boolean getPrivate() {
         return isPrivate;
     }
@@ -48,19 +57,21 @@ public class GitHubRepo implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        GitHubRepo that = (GitHubRepo) o;
+        GitHubRepo repo = (GitHubRepo) o;
 
-        if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (defaultBranch != null ? !defaultBranch.equals(that.defaultBranch) : that.defaultBranch != null)
+        if (id != null ? !id.equals(repo.id) : repo.id != null) return false;
+        if (name != null ? !name.equals(repo.name) : repo.name != null) return false;
+        if (fullName != null ? !fullName.equals(repo.fullName) : repo.fullName != null) return false;
+        if (defaultBranch != null ? !defaultBranch.equals(repo.defaultBranch) : repo.defaultBranch != null)
             return false;
-        return isPrivate != null ? isPrivate.equals(that.isPrivate) : that.isPrivate == null;
+        return isPrivate != null ? isPrivate.equals(repo.isPrivate) : repo.isPrivate == null;
     }
 
     @Override
     public int hashCode() {
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (fullName != null ? fullName.hashCode() : 0);
         result = 31 * result + (defaultBranch != null ? defaultBranch.hashCode() : 0);
         result = 31 * result + (isPrivate != null ? isPrivate.hashCode() : 0);
         return result;
@@ -71,6 +82,7 @@ public class GitHubRepo implements Serializable {
         return "GitHubRepo{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
+                ", fullName='" + fullName + '\'' +
                 ", defaultBranch='" + defaultBranch + '\'' +
                 ", isPrivate=" + isPrivate +
                 '}';
