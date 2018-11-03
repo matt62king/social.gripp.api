@@ -9,11 +9,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import social.gripp.api.projects.models.GitHubRepo;
 import social.gripp.api.projects.models.ProjectRepo;
 
+import java.util.List;
+
 @FeignClient(value = "projects-server")
 public interface GitHubRepoProxyService {
 
     @GetMapping("api/v1/projects/repos/{email}/{token}")
-    ResponseEntity<GitHubRepo> getUserRepos(@PathVariable("email") String email, @PathVariable("token") String token);
+    ResponseEntity<List<GitHubRepo>> getUserRepos(@PathVariable("email") String email, @PathVariable("token") String token);
 
     @PostMapping("api/v1/projects/add_repo")
     ResponseEntity<ProjectRepo> addRepoToProject(@RequestBody ProjectRepo projectRepo);

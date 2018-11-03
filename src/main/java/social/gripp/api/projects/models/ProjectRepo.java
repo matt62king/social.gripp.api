@@ -9,6 +9,7 @@ public class ProjectRepo implements Serializable {
 
     private UUID id;
     private UUID projectId;
+    private String prefix;
     private GitHubRepo gitHubRepo;
 
     public UUID getId() {
@@ -25,6 +26,14 @@ public class ProjectRepo implements Serializable {
 
     public void setProjectId(UUID projectId) {
         this.projectId = projectId;
+    }
+
+    public String getPrefix() {
+        return prefix;
+    }
+
+    public void setPrefix(String prefix) {
+        this.prefix = prefix;
     }
 
     public GitHubRepo getGitHubRepo() {
@@ -44,6 +53,7 @@ public class ProjectRepo implements Serializable {
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (projectId != null ? !projectId.equals(that.projectId) : that.projectId != null) return false;
+        if (prefix != null ? !prefix.equals(that.prefix) : that.prefix != null) return false;
         return gitHubRepo != null ? gitHubRepo.equals(that.gitHubRepo) : that.gitHubRepo == null;
     }
 
@@ -51,6 +61,7 @@ public class ProjectRepo implements Serializable {
     public int hashCode() {
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (projectId != null ? projectId.hashCode() : 0);
+        result = 31 * result + (prefix != null ? prefix.hashCode() : 0);
         result = 31 * result + (gitHubRepo != null ? gitHubRepo.hashCode() : 0);
         return result;
     }
@@ -60,6 +71,7 @@ public class ProjectRepo implements Serializable {
         return "ProjectRepo{" +
                 "id=" + id +
                 ", projectId=" + projectId +
+                ", prefix='" + prefix + '\'' +
                 ", gitHubRepo=" + gitHubRepo +
                 '}';
     }
