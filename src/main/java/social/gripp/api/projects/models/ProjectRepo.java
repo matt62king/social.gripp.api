@@ -1,30 +1,29 @@
 package social.gripp.api.projects.models;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 public class ProjectRepo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private UUID id;
-    private UUID projectId;
+    private String id;
+    private String projectId;
     private String prefix;
     private GitHubRepo gitHubRepo;
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public UUID getProjectId() {
+    public String getProjectId() {
         return projectId;
     }
 
-    public void setProjectId(UUID projectId) {
+    public void setProjectId(String projectId) {
         this.projectId = projectId;
     }
 
@@ -69,8 +68,8 @@ public class ProjectRepo implements Serializable {
     @Override
     public String toString() {
         return "ProjectRepo{" +
-                "id=" + id +
-                ", projectId=" + projectId +
+                "id='" + id + '\'' +
+                ", projectId='" + projectId + '\'' +
                 ", prefix='" + prefix + '\'' +
                 ", gitHubRepo=" + gitHubRepo +
                 '}';
