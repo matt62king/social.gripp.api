@@ -11,6 +11,6 @@ import java.util.List;
 @FeignClient(value = "projects-server")
 public interface GitHubRepoProxyService {
 
-    @GetMapping("api/v1/projects/repos/{email}/{token}")
+    @GetMapping("api/v1/projects/repos/{email:.+}")
     ResponseEntity<List<GitHubRepo>> getUserRepos(@PathVariable("email") String email);
 }
