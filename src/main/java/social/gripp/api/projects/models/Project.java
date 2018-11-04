@@ -1,6 +1,7 @@
 package social.gripp.api.projects.models;
 
 import java.io.Serializable;
+import java.util.Set;
 
 public class Project implements Serializable {
 
@@ -9,6 +10,7 @@ public class Project implements Serializable {
     private String id;
     private String owner;
     private String projectName;
+    private Set<ProjectRepo> projectRepos;
 
     public String getId() {
         return id;
@@ -34,6 +36,14 @@ public class Project implements Serializable {
         this.projectName = projectName;
     }
 
+    public Set<ProjectRepo> getProjectRepos() {
+        return projectRepos;
+    }
+
+    public void setProjectRepos(Set<ProjectRepo> projectRepos) {
+        this.projectRepos = projectRepos;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -43,7 +53,8 @@ public class Project implements Serializable {
 
         if (id != null ? !id.equals(project.id) : project.id != null) return false;
         if (owner != null ? !owner.equals(project.owner) : project.owner != null) return false;
-        return projectName != null ? projectName.equals(project.projectName) : project.projectName == null;
+        if (projectName != null ? !projectName.equals(project.projectName) : project.projectName != null) return false;
+        return projectRepos != null ? projectRepos.equals(project.projectRepos) : project.projectRepos == null;
     }
 
     @Override
@@ -51,6 +62,7 @@ public class Project implements Serializable {
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (owner != null ? owner.hashCode() : 0);
         result = 31 * result + (projectName != null ? projectName.hashCode() : 0);
+        result = 31 * result + (projectRepos != null ? projectRepos.hashCode() : 0);
         return result;
     }
 
@@ -60,6 +72,7 @@ public class Project implements Serializable {
                 "id='" + id + '\'' +
                 ", owner='" + owner + '\'' +
                 ", projectName='" + projectName + '\'' +
+                ", projectRepos=" + projectRepos +
                 '}';
     }
 }
