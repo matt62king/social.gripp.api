@@ -28,3 +28,13 @@ s
 Csrc/main/java/social/gripp/api/user/GitHubUserAuthFeignService.java,8/0/805afbcac765dac0d2b53667ac9019be6066d682
 n
 >src/main/java/social/gripp/api/user/models/GitHubUserAuth.java,6/2/62f2a7d9ee06c22c895e6626f5c7efcd107d8d41
+q
+Asrc/main/java/social/gripp/api/global/models/GitHubUserModel.java,2/1/21d5496f931bfa51e384f381037ac7aee6f2fa05
+o
+?src/main/java/social/gripp/api/projects/models/ProjectRepo.java,3/f/3fc17832a11dfa502ecc7b5ea693245b44774701
+n
+>src/main/java/social/gripp/api/projects/models/GitHubRepo.java,b/0/b0c1942868aabbe34e8baad6a02e6f5a4f183369
+s
+Csrc/main/java/social/gripp/api/projects/GitHubRepoProxyService.java,2/1/212ff1df3d39759b5f0f2d27f1147055751a2a1d
+u
+Esrc/main/java/social/gripp/api/projects/ProjectReposFeignService.java,5/c/5ca4d1298142fb9d08bebfb1a37c3cf97e71b6dc
