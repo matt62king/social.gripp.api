@@ -38,3 +38,7 @@ s
 Csrc/main/java/social/gripp/api/projects/GitHubRepoProxyService.java,2/1/212ff1df3d39759b5f0f2d27f1147055751a2a1d
 u
 Esrc/main/java/social/gripp/api/projects/ProjectReposFeignService.java,5/c/5ca4d1298142fb9d08bebfb1a37c3cf97e71b6dc
+w
+Gsrc/main/java/social/gripp/api/projects/ProjectDetailsFeignService.java,0/3/030a44475864a8fe4e5db4752f95bb7fa6e5d67e
+o
+?src/main/java/social/gripp/api/projects/models/ProjectUser.java,5/5/55ed2044b0b3c817d7d03e0aacd54ec6bd73edd8
