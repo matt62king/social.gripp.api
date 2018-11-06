@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import social.gripp.api.projects.models.ProjectUser;
 import social.gripp.api.utils.responces.BooleanResponse;
 
+import java.util.List;
+
 @FeignClient(value = "projects-server")
 public interface ProjectDetailsFeignService {
 
     @GetMapping("api/v1/project/{id}/details/users")
-    ResponseEntity<ProjectUser> getProjectUsers(@PathVariable("id") String projectId);
+    ResponseEntity<List<ProjectUser>> getProjectUsers(@PathVariable("id") String projectId);
 
     @PostMapping("api/v1/project/details/add_user")
     ResponseEntity<BooleanResponse> addProjectUser(@RequestBody ProjectUser projectUser);
