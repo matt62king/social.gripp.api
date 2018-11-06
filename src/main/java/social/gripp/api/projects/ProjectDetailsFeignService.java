@@ -13,7 +13,7 @@ import social.gripp.api.utils.responces.BooleanResponse;
 @FeignClient(value = "projects-server")
 public interface ProjectDetailsFeignService {
 
-    @GetMapping("api/v1/project/{id}/details/user")
+    @GetMapping("api/v1/project/{id}/details/users")
     ResponseEntity<BooleanResponse> getProjectUsers(@PathVariable("id") String projectId);
 
     @PostMapping("api/v1/project/details/add_user")
