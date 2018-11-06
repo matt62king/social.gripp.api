@@ -14,7 +14,7 @@ import social.gripp.api.utils.responces.BooleanResponse;
 public interface ProjectDetailsFeignService {
 
     @GetMapping("api/v1/project/{id}/details/users")
-    ResponseEntity<BooleanResponse> getProjectUsers(@PathVariable("id") String projectId);
+    ResponseEntity<ProjectUser> getProjectUsers(@PathVariable("id") String projectId);
 
     @PostMapping("api/v1/project/details/add_user")
     ResponseEntity<BooleanResponse> addProjectUser(@RequestBody ProjectUser projectUser);
