@@ -2,6 +2,7 @@ package social.gripp.api.projects;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,4 +18,7 @@ public interface ProjectDetailsFeignService {
 
     @PostMapping("api/v1/project/details/add_user")
     ResponseEntity<BooleanResponse> addProjectUser(@RequestBody ProjectUser projectUser);
+
+    @DeleteMapping("api/v1/project/{id}/details/delete_user/{email:.+}")
+    ResponseEntity<BooleanResponse> removeUser(@PathVariable("id") String projectId, @PathVariable("email") String user);
 }
