@@ -9,6 +9,6 @@ import social.gripp.api.projects.models.ProjectRepo;
 @FeignClient(value = "projects-server")
 public interface ProjectReposFeignService {
 
-    @PostMapping("api/v1/projects/add_repo")
+    @PostMapping("api/v1/project/add_repo")
     ResponseEntity<ProjectRepo> addRepoToProject(@RequestBody ProjectRepo projectRepo);
 }

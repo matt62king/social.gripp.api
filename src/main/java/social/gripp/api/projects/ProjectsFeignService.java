@@ -13,12 +13,12 @@ import java.util.List;
 @FeignClient(value = "projects-server")
 public interface ProjectsFeignService {
 
-    @PostMapping("api/v1/projects/create")
+    @PostMapping("api/v1/project/create")
     ResponseEntity<Project> createProject(@RequestBody Project project);
 
     @GetMapping("api/v1/project/{id}")
     ResponseEntity<Project> getProject(@PathVariable("id") String id);
 
-    @GetMapping("api/v1/projects/{email:.+}")
+    @GetMapping("api/v1/project/{email:.+}")
     ResponseEntity<List<Project>> getProjectsForUser(@PathVariable("email") String email);
 }
