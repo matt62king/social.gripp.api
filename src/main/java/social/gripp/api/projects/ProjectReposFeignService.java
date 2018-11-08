@@ -12,7 +12,7 @@ import social.gripp.api.utils.responces.BooleanResponse;
 @FeignClient(value = "projects-server")
 public interface ProjectReposFeignService {
 
-    @PostMapping("api/v1/project/add_repo")
+    @PostMapping("api/v1/project/repo/add")
     ResponseEntity<ProjectRepo> addRepoToProject(@RequestBody ProjectRepo projectRepo);
 
     @DeleteMapping("api/v1/project/repo/delete/{id}")
