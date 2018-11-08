@@ -42,3 +42,5 @@ w
 Gsrc/main/java/social/gripp/api/projects/ProjectDetailsFeignService.java,0/3/030a44475864a8fe4e5db4752f95bb7fa6e5d67e
 o
 ?src/main/java/social/gripp/api/projects/models/ProjectUser.java,5/5/55ed2044b0b3c817d7d03e0aacd54ec6bd73edd8
+r
+Bsrc/main/java/social/gripp/api/user/UserTypeAheadFeignService.java,1/5/151860cc1c21d066ec2c89d5fe7baf61b57d430a
