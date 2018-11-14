@@ -21,6 +21,6 @@ public interface ProjectDetailsFeignService {
     @PostMapping("api/v1/project/details/add_user")
     ResponseEntity<BooleanResponse> addProjectUser(@RequestBody ProjectUser projectUser);
 
-    @DeleteMapping("api/v1/project/{id}/details/delete_user/{email:.+}")
+    @DeleteMapping("api/v1/project/{id}/details/delete_user/{email:.+}/all")
     ResponseEntity<BooleanResponse> removeUser(@PathVariable("id") String projectId, @PathVariable("email") String user);
 }

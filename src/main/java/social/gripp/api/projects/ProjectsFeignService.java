@@ -19,6 +19,6 @@ public interface ProjectsFeignService {
     @GetMapping("api/v1/project/{id}")
     ResponseEntity<Project> getProject(@PathVariable("id") String id);
 
-    @GetMapping("api/v1/project/user/{email:.+}")
+    @GetMapping("api/v1/project/user/{email:.+}/all")
     ResponseEntity<List<Project>> getProjectsForUser(@PathVariable("email") String email);
 }
