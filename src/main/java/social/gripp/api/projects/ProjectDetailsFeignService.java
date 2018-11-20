@@ -19,7 +19,7 @@ public interface ProjectDetailsFeignService {
     ResponseEntity<List<ProjectUser>> getProjectUsers(@PathVariable("id") String projectId);
 
     @PostMapping("api/v1/project/details/add_user")
-    ResponseEntity<BooleanResponse> addProjectUser(@RequestBody ProjectUser projectUser);
+    ResponseEntity<BooleanResponse> addProjectUser(@RequestBody List<ProjectUser> projectUser);
 
     @DeleteMapping("api/v1/project/{id}/details/delete_user/{email:.+}/all")
     ResponseEntity<BooleanResponse> removeUser(@PathVariable("id") String projectId, @PathVariable("email") String user);
