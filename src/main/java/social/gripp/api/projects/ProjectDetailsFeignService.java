@@ -24,6 +24,6 @@ public interface ProjectDetailsFeignService {
     @PostMapping("api/v1/project/repo/branch/add_permission")
     ResponseEntity<RepoBranchPermissions> addBranchPermission(@RequestBody RepoBranchPermissions branchPermissions);
 
-    @DeleteMapping("api/v1/project/repo/{id}/branch/delete_permission/{id}")
-    ResponseEntity<BooleanResponse> deleteBranchPermission(@PathVariable String repoId, @PathVariable("id") String permissionId);
+    @DeleteMapping("api/v1/project/repo/branch/delete_permission/{id}")
+    ResponseEntity<BooleanResponse> deleteBranchPermission(@PathVariable("id") String permissionId);
 }
