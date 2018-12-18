@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import social.gripp.api.projects.models.Project;
 
-import java.util.List;
-
 @FeignClient(value = "projects-server")
 public interface ProjectsFeignService {
 

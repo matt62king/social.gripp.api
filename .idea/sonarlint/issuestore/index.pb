@@ -44,3 +44,7 @@ o
 ?src/main/java/social/gripp/api/projects/models/ProjectUser.java,5/5/55ed2044b0b3c817d7d03e0aacd54ec6bd73edd8
 r
 Bsrc/main/java/social/gripp/api/user/UserTypeAheadFeignService.java,1/5/151860cc1c21d066ec2c89d5fe7baf61b57d430a
+y
+Isrc/main/java/social/gripp/api/projects/models/RepoBranchPermissions.java,9/8/989e385035c9c10837be89139098346cd4d77233
+}
+Msrc/main/java/social/gripp/api/projects/models/RepoBranchUserPermissions.java,7/6/76045b5c58bbcba24be457770a13f39dd9e46037
