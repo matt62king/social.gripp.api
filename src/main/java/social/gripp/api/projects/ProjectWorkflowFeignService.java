@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import social.gripp.api.projects.models.ProjectWorkflow;
 import social.gripp.api.projects.models.WorkflowNextLinker;
 import social.gripp.api.projects.models.WorkflowPreviousLinker;
+import social.gripp.api.projects.models.WorkflowTransition;
 import social.gripp.api.utils.responces.BooleanResponse;
 
 @FeignClient(value = "projects-server")
@@ -35,4 +36,10 @@ public interface ProjectWorkflowFeignService {
 
     @DeleteMapping("api/v1/project/details/workflow/nextlink/delete/{id}")
     ResponseEntity<BooleanResponse> removeNextLink(@PathVariable("id") String id);
+
+    @PostMapping("api/v1/project/details/workflow/transition/create")
+    ResponseEntity<WorkflowTransition> createTransition(@RequestBody WorkflowTransition transition);
+
+    @DeleteMapping("api/v1/project/details/workflow/transition/delete/{id}")
+    ResponseEntity<BooleanResponse> removeTransition(@PathVariable("id") String id);
 }
