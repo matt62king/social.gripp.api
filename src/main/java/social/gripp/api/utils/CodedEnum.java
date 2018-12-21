@@ -1,6 +1,5 @@
 package social.gripp.api.utils;
 
-public interface CodedEnum<E> {
+public interface CodedEnum {
     String getCode();
-    E enumValue(String code);
 }
