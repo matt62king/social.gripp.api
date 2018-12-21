@@ -1,8 +1,9 @@
 package social.gripp.api.projects.models;
 
+import com.google.common.collect.Lists;
 import social.gripp.api.utils.CodedEnum;
 
-public enum BranchAction implements CodedEnum {
+public enum BranchAction implements CodedEnum<BranchAction> {
     CREATE("C"),
     MERGE("M"),
     DELETE("D");
@@ -18,4 +19,13 @@ public enum BranchAction implements CodedEnum {
     public String getCode() {
         return code;
     }
+
+    @Override
+    public BranchAction enumValue(String code) {
+        return Lists.newArrayList(values()).stream()
+                .filter(branchAction -> code.equalsIgnoreCase(branchAction.getCode()))
+                .findFirst().orElseThrow(() -> new RuntimeException("No enum value for code: " + code));
+    }
+
+
 }
