@@ -13,6 +13,8 @@ import social.gripp.api.projects.models.WorkflowPreviousLinker;
 import social.gripp.api.projects.models.WorkflowTransition;
 import social.gripp.api.utils.responces.BooleanResponse;
 
+import java.util.List;
+
 @FeignClient(value = "projects-server")
 public interface ProjectWorkflowFeignService {
 
@@ -42,4 +44,7 @@ public interface ProjectWorkflowFeignService {
 
     @DeleteMapping("api/v1/project/details/workflow/transition/delete/{id}")
     ResponseEntity<BooleanResponse> removeTransition(@PathVariable("id") String id);
+
+    @PutMapping("api/v1/project/details/workflow/sequence/update")
+    ResponseEntity<List<ProjectWorkflow>> updateSequences(@RequestBody List<ProjectWorkflow> projectWorkflows);
 }
