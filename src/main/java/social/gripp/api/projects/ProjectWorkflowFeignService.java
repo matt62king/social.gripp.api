@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import social.gripp.api.projects.models.ProjectWorkflow;
-import social.gripp.api.projects.models.WorkflowNextLinker;
-import social.gripp.api.projects.models.WorkflowPreviousLinker;
+import social.gripp.api.projects.models.WorkflowLinker;
 import social.gripp.api.projects.models.WorkflowTransition;
 import social.gripp.api.utils.responces.BooleanResponse;
 
@@ -27,17 +26,11 @@ public interface ProjectWorkflowFeignService {
     @DeleteMapping("api/v1/project/details/workflow/delete/{id}")
     ResponseEntity<BooleanResponse> removeWorkflow(@PathVariable("id") String id);
 
-    @PostMapping("api/v1/project/details/workflow/previouslink/create")
-    ResponseEntity<WorkflowPreviousLinker> createPreviousLink(@RequestBody WorkflowPreviousLinker workflowPreviousLinker);
+    @PostMapping("api/v1/project/details/workflow/linker/update")
+    ResponseEntity<WorkflowLinker> createWorkflowLinker(@RequestBody WorkflowLinker workflowLinker);
 
-    @DeleteMapping("api/v1/project/details/workflow/previouslink/delete/{id}")
-    ResponseEntity<BooleanResponse> removePreviousLink(@PathVariable("id") String id);
-
-    @PostMapping("api/v1/project/details/workflow/nextlink/create")
-    ResponseEntity<WorkflowNextLinker> createNextLink(@RequestBody WorkflowNextLinker workflowNextLinker);
-
-    @DeleteMapping("api/v1/project/details/workflow/nextlink/delete/{id}")
-    ResponseEntity<BooleanResponse> removeNextLink(@PathVariable("id") String id);
+    @DeleteMapping("api/v1/project/details/workflow/linker/delete/{id}")
+    ResponseEntity<BooleanResponse> deleteWorkflowLinker(@PathVariable("id") String id);
 
     @PostMapping("api/v1/project/details/workflow/transition/create")
     ResponseEntity<WorkflowTransition> createTransition(@RequestBody WorkflowTransition transition);
