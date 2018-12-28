@@ -53,12 +53,10 @@ Csrc/main/java/social/gripp/api/projects/models/ProjectWorkflow.java,a/9/a98cbd
 x
 Hsrc/main/java/social/gripp/api/projects/ProjectWorkflowFeignService.java,7/0/70c9964626cd3057cfc17d987efc984d7e19732a
 v
-Fsrc/main/java/social/gripp/api/projects/models/WorkflowNextLinker.java,2/2/22542aeec0847790c295f748688f9b8880deb48d
-z
-Jsrc/main/java/social/gripp/api/projects/models/WorkflowPreviousLinker.java,6/9/69d5a8220bccec6e2c2d0038df1dc13828797c40
-v
 Fsrc/main/java/social/gripp/api/projects/models/WorkflowTransition.java,2/b/2ba4b7a5362a8509b35c2cf6bf6c34d182b8d04f
 c
 3src/main/java/social/gripp/api/utils/CodedEnum.java,d/1/d16fdb9e531e4ad44c7609b380556413ae063173
 p
 @src/main/java/social/gripp/api/projects/models/BranchAction.java,a/3/a3527b3efca4904bddb821702c690294808a8319
+r
+Bsrc/main/java/social/gripp/api/projects/models/WorkflowLinker.java,8/b/8b739e2693ce48b6753f9d523c94d8a7eca35977
