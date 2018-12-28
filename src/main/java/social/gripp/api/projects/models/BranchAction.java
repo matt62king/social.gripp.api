@@ -6,7 +6,8 @@ import social.gripp.api.utils.CodedEnum;
 public enum BranchAction implements CodedEnum {
     CREATE("C"),
     MERGE("M"),
-    DELETE("D");
+    DELETE("D"),
+    PULL_REQUEST("P");
 
     private String code;
 
