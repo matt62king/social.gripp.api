@@ -9,6 +9,7 @@ public class ProjectBoard implements Serializable {
     private String id;
     private String projectId;
     private String description;
+    private Boolean masterBoard;
 
     public String getId() {
         return id;
@@ -34,6 +35,14 @@ public class ProjectBoard implements Serializable {
         this.description = description;
     }
 
+    public Boolean getMasterBoard() {
+        return masterBoard;
+    }
+
+    public void setMasterBoard(Boolean masterBoard) {
+        this.masterBoard = masterBoard;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -43,7 +52,8 @@ public class ProjectBoard implements Serializable {
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (projectId != null ? !projectId.equals(that.projectId) : that.projectId != null) return false;
-        return description != null ? description.equals(that.description) : that.description == null;
+        if (description != null ? !description.equals(that.description) : that.description != null) return false;
+        return masterBoard != null ? masterBoard.equals(that.masterBoard) : that.masterBoard == null;
     }
 
     @Override
@@ -51,6 +61,7 @@ public class ProjectBoard implements Serializable {
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (projectId != null ? projectId.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
+        result = 31 * result + (masterBoard != null ? masterBoard.hashCode() : 0);
         return result;
     }
 
@@ -60,6 +71,7 @@ public class ProjectBoard implements Serializable {
                 "id='" + id + '\'' +
                 ", projectId='" + projectId + '\'' +
                 ", description='" + description + '\'' +
+                ", masterBoard=" + masterBoard +
                 '}';
     }
 }
