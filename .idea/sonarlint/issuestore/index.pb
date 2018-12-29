@@ -60,3 +60,9 @@ p
 @src/main/java/social/gripp/api/projects/models/BranchAction.java,a/3/a3527b3efca4904bddb821702c690294808a8319
 r
 Bsrc/main/java/social/gripp/api/projects/models/WorkflowLinker.java,8/b/8b739e2693ce48b6753f9d523c94d8a7eca35977
+u
+Esrc/main/java/social/gripp/api/projects/ProjectBoardFeignService.java,1/b/1b9765b3535dda2daff0954e5d018a26819d6200
+p
+@src/main/java/social/gripp/api/projects/models/ProjectBoard.java,5/6/560fba553dd8f486c0c22706022f49b9f7ab5101
+v
+Fsrc/main/java/social/gripp/api/projects/models/ProjectBoardLinker.java,6/c/6cd0a07aa999f202edd5434f3cb009d657690e8f

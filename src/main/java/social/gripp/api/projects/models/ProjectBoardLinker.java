@@ -9,6 +9,7 @@ public class ProjectBoardLinker implements Serializable {
     private String id;
     private String projectBoardId;
     private String projectWorkflowId;
+    private Boolean masterBoard;
 
     public String getId() {
         return id;
@@ -34,6 +35,14 @@ public class ProjectBoardLinker implements Serializable {
         this.projectWorkflowId = projectWorkflowId;
     }
 
+    public Boolean getMasterBoard() {
+        return masterBoard;
+    }
+
+    public void setMasterBoard(Boolean masterBoard) {
+        this.masterBoard = masterBoard;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -44,7 +53,9 @@ public class ProjectBoardLinker implements Serializable {
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (projectBoardId != null ? !projectBoardId.equals(that.projectBoardId) : that.projectBoardId != null)
             return false;
-        return projectWorkflowId != null ? projectWorkflowId.equals(that.projectWorkflowId) : that.projectWorkflowId == null;
+        if (projectWorkflowId != null ? !projectWorkflowId.equals(that.projectWorkflowId) : that.projectWorkflowId != null)
+            return false;
+        return masterBoard != null ? masterBoard.equals(that.masterBoard) : that.masterBoard == null;
     }
 
     @Override
@@ -52,6 +63,7 @@ public class ProjectBoardLinker implements Serializable {
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (projectBoardId != null ? projectBoardId.hashCode() : 0);
         result = 31 * result + (projectWorkflowId != null ? projectWorkflowId.hashCode() : 0);
+        result = 31 * result + (masterBoard != null ? masterBoard.hashCode() : 0);
         return result;
     }
 
@@ -61,6 +73,7 @@ public class ProjectBoardLinker implements Serializable {
                 "id='" + id + '\'' +
                 ", projectBoardId='" + projectBoardId + '\'' +
                 ", projectWorkflowId='" + projectWorkflowId + '\'' +
+                ", masterBoard=" + masterBoard +
                 '}';
     }
 }
