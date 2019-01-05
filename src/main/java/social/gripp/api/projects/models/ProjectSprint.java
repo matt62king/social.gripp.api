@@ -16,8 +16,7 @@ public class ProjectSprint implements Serializable {
     Integer duration;
     DurationUnit durationUnit;
     Date startDate;
-    Boolean complete;
-    Boolean active;
+    SprintStatus sprintStatus;
 
     public String getId() {
         return id;
@@ -75,20 +74,12 @@ public class ProjectSprint implements Serializable {
         this.startDate = startDate;
     }
 
-    public Boolean getComplete() {
-        return complete;
+    public SprintStatus getSprintStatus() {
+        return sprintStatus;
     }
 
-    public void setComplete(Boolean complete) {
-        this.complete = complete;
-    }
-
-    public Boolean getActive() {
-        return active;
-    }
-
-    public void setActive(Boolean active) {
-        this.active = active;
+    public void setSprintStatus(SprintStatus sprintStatus) {
+        this.sprintStatus = sprintStatus;
     }
 
     @Override
@@ -106,8 +97,7 @@ public class ProjectSprint implements Serializable {
         if (duration != null ? !duration.equals(that.duration) : that.duration != null) return false;
         if (durationUnit != that.durationUnit) return false;
         if (startDate != null ? !startDate.equals(that.startDate) : that.startDate != null) return false;
-        if (complete != null ? !complete.equals(that.complete) : that.complete != null) return false;
-        return active != null ? active.equals(that.active) : that.active == null;
+        return sprintStatus == that.sprintStatus;
     }
 
     @Override
@@ -119,8 +109,21 @@ public class ProjectSprint implements Serializable {
         result = 31 * result + (duration != null ? duration.hashCode() : 0);
         result = 31 * result + (durationUnit != null ? durationUnit.hashCode() : 0);
         result = 31 * result + (startDate != null ? startDate.hashCode() : 0);
-        result = 31 * result + (complete != null ? complete.hashCode() : 0);
-        result = 31 * result + (active != null ? active.hashCode() : 0);
+        result = 31 * result + (sprintStatus != null ? sprintStatus.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "ProjectSprint{" +
+                "id='" + id + '\'' +
+                ", projectId='" + projectId + '\'' +
+                ", projectBoardId='" + projectBoardId + '\'' +
+                ", description='" + description + '\'' +
+                ", duration=" + duration +
+                ", durationUnit=" + durationUnit +
+                ", startDate=" + startDate +
+                ", sprintStatus=" + sprintStatus +
+                '}';
     }
 }
