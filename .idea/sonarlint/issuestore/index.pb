@@ -66,3 +66,11 @@ p
 @src/main/java/social/gripp/api/projects/models/ProjectBoard.java,5/6/560fba553dd8f486c0c22706022f49b9f7ab5101
 v
 Fsrc/main/java/social/gripp/api/projects/models/ProjectBoardLinker.java,6/c/6cd0a07aa999f202edd5434f3cb009d657690e8f
+p
+@src/main/java/social/gripp/api/projects/models/SprintStatus.java,b/4/b4787b3b5c19cec055bb032007969546886b5c51
+q
+Asrc/main/java/social/gripp/api/projects/models/ProjectSprint.java,0/6/060a8f643d7757ebe6cdbefe2ff6412fca27f93f
+v
+Fsrc/main/java/social/gripp/api/projects/ProjectSprintFeignService.java,d/2/d20c3029f0cc59f5faa197d106f721d83e41bb48
+n
+>src/main/java/social/gripp/api/global/models/DurationUnit.java,0/f/0fad601c003694e4e6911ac705549add2ef2a397
