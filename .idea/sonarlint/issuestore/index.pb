@@ -74,3 +74,7 @@ v
 Fsrc/main/java/social/gripp/api/projects/ProjectSprintFeignService.java,d/2/d20c3029f0cc59f5faa197d106f721d83e41bb48
 n
 >src/main/java/social/gripp/api/global/models/DurationUnit.java,0/f/0fad601c003694e4e6911ac705549add2ef2a397
+j
+:src/main/java/social/gripp/api/tasks/TaskFeignService.java,7/0/704956e2d96eaff109c0c779d14ef2fc108a7239
+e
+5src/main/java/social/gripp/api/tasks/models/Task.java,1/2/12d605d2769f6e9bfb8c0a658eb07a8c2baa03c7
