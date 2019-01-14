@@ -78,3 +78,5 @@ j
 :src/main/java/social/gripp/api/tasks/TaskFeignService.java,7/0/704956e2d96eaff109c0c779d14ef2fc108a7239
 e
 5src/main/java/social/gripp/api/tasks/models/Task.java,1/2/12d605d2769f6e9bfb8c0a658eb07a8c2baa03c7
+k
+;src/main/java/social/gripp/api/tasks/models/TaskAssign.java,b/a/bae93f35eb4a6f6fb84a1597510b5bdaafa79aa9

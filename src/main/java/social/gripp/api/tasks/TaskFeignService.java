@@ -14,9 +14,9 @@ public interface TaskFeignService {
     @PostMapping("api/v1/tasks/create")
     ResponseEntity<Task> createTask(@RequestBody Task task);
 
-    @PutMapping("api/v1/task/update")
+    @PutMapping("api/v1/tasks/update")
     ResponseEntity<Task> updateTask(@RequestBody Task task);
 
-    @PutMapping("api/v1/task/assign")
+    @PutMapping("api/v1/tasks/assign")
     ResponseEntity<Task> assignTask(@RequestBody TaskAssign taskAssign);
 }
