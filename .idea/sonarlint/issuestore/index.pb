@@ -80,3 +80,5 @@ e
 5src/main/java/social/gripp/api/tasks/models/Task.java,1/2/12d605d2769f6e9bfb8c0a658eb07a8c2baa03c7
 k
 ;src/main/java/social/gripp/api/tasks/models/TaskAssign.java,b/a/bae93f35eb4a6f6fb84a1597510b5bdaafa79aa9
+o
+?src/main/java/social/gripp/api/tasks/models/TaskTransition.java,0/e/0edef66da5bef2a192ec56c08fa0f01a491bd36f
