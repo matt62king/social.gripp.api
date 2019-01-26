@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import social.gripp.api.tasks.models.Task;
 import social.gripp.api.tasks.models.TaskAssign;
+import social.gripp.api.tasks.models.TaskTransition;
 
 @FeignClient(value = "tasks-server")
 public interface TaskFeignService {
@@ -19,4 +20,7 @@ public interface TaskFeignService {
 
     @PutMapping("api/v1/tasks/assign")
     ResponseEntity<Task> assignTask(@RequestBody TaskAssign taskAssign);
+
+    @PutMapping("api/v1/tasks/transition")
+    ResponseEntity<Task> transitionTask(@RequestBody TaskTransition taskTransition);
 }
