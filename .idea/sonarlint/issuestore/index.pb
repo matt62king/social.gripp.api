@@ -82,3 +82,7 @@ k
 ;src/main/java/social/gripp/api/tasks/models/TaskAssign.java,b/a/bae93f35eb4a6f6fb84a1597510b5bdaafa79aa9
 o
 ?src/main/java/social/gripp/api/tasks/models/TaskTransition.java,0/e/0edef66da5bef2a192ec56c08fa0f01a491bd36f
+k
+;src/main/java/social/gripp/api/tasks/models/TaskSprint.java,a/6/a623ae0a807737388fb2284a889aacec1ff1ba50
+j
+:src/main/java/social/gripp/api/tasks/models/TaskBoard.java,3/0/30021a9c4fdca45c1762a47a2b8b3be80a259f4e
