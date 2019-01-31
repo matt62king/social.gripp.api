@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import social.gripp.api.tasks.models.Task;
 import social.gripp.api.tasks.models.TaskAssign;
 import social.gripp.api.tasks.models.TaskBoard;
+import social.gripp.api.tasks.models.TaskDescription;
+import social.gripp.api.tasks.models.TaskPoints;
 import social.gripp.api.tasks.models.TaskSprint;
 import social.gripp.api.tasks.models.TaskTransition;
 
@@ -31,4 +33,10 @@ public interface TaskFeignService {
 
     @PutMapping("api/v1/tasks/board-assign")
     ResponseEntity<Task> boardAssign(@RequestBody TaskBoard taskBoard);
+
+    @PutMapping("api/v1/tasks/points")
+    ResponseEntity<Task> pointsUpdate(@RequestBody TaskPoints taskPoints);
+
+    @PutMapping("api/v1/tasks/description")
+    ResponseEntity<Task> descriptionUpdate(@RequestBody TaskDescription taskDescription);
 }
