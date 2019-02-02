@@ -11,6 +11,7 @@ import social.gripp.api.tasks.models.TaskBoard;
 import social.gripp.api.tasks.models.TaskDescription;
 import social.gripp.api.tasks.models.TaskPoints;
 import social.gripp.api.tasks.models.TaskSprint;
+import social.gripp.api.tasks.models.TaskTestingNotes;
 import social.gripp.api.tasks.models.TaskTransition;
 
 @FeignClient(value = "tasks-server")
@@ -39,4 +40,7 @@ public interface TaskFeignService {
 
     @PutMapping("api/v1/tasks/description")
     ResponseEntity<Task> descriptionUpdate(@RequestBody TaskDescription taskDescription);
+
+    @PutMapping("api/v1/tasks/testing-notes")
+    ResponseEntity<Task> testingNotesUpdate(@RequestBody TaskTestingNotes taskTestingNotes);
 }
