@@ -7,9 +7,8 @@ public class GitBranch implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String name;
-    private String url;
+    private String sha;
     private String branchFrom;
-    private GitCommit gitCommit;
 
     public String getName() {
         return name;
@@ -19,12 +18,12 @@ public class GitBranch implements Serializable {
         this.name = name;
     }
 
-    public String getUrl() {
-        return url;
+    public String getSha() {
+        return sha;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setSha(String sha) {
+        this.sha = sha;
     }
 
     public String getBranchFrom() {
@@ -35,14 +34,6 @@ public class GitBranch implements Serializable {
         this.branchFrom = branchFrom;
     }
 
-    public GitCommit getGitCommit() {
-        return gitCommit;
-    }
-
-    public void setGitCommit(GitCommit gitCommit) {
-        this.gitCommit = gitCommit;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -51,17 +42,15 @@ public class GitBranch implements Serializable {
         GitBranch gitBranch = (GitBranch) o;
 
         if (name != null ? !name.equals(gitBranch.name) : gitBranch.name != null) return false;
-        if (url != null ? !url.equals(gitBranch.url) : gitBranch.url != null) return false;
-        if (branchFrom != null ? !branchFrom.equals(gitBranch.branchFrom) : gitBranch.branchFrom != null) return false;
-        return gitCommit != null ? gitCommit.equals(gitBranch.gitCommit) : gitBranch.gitCommit == null;
+        if (sha != null ? !sha.equals(gitBranch.sha) : gitBranch.sha != null) return false;
+        return branchFrom != null ? branchFrom.equals(gitBranch.branchFrom) : gitBranch.branchFrom == null;
     }
 
     @Override
     public int hashCode() {
         int result = name != null ? name.hashCode() : 0;
-        result = 31 * result + (url != null ? url.hashCode() : 0);
+        result = 31 * result + (sha != null ? sha.hashCode() : 0);
         result = 31 * result + (branchFrom != null ? branchFrom.hashCode() : 0);
-        result = 31 * result + (gitCommit != null ? gitCommit.hashCode() : 0);
         return result;
     }
 
@@ -69,9 +58,8 @@ public class GitBranch implements Serializable {
     public String toString() {
         return "GitBranch{" +
                 "name='" + name + '\'' +
-                ", url='" + url + '\'' +
+                ", sha='" + sha + '\'' +
                 ", branchFrom='" + branchFrom + '\'' +
-                ", gitCommit=" + gitCommit +
                 '}';
     }
 }
