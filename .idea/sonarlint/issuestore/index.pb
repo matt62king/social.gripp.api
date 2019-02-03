@@ -90,3 +90,5 @@ p
 @src/main/java/social/gripp/api/tasks/models/TaskDescription.java,2/c/2c18a29271608a7b2b3a058199881fa239fa78c7
 k
 ;src/main/java/social/gripp/api/tasks/models/TaskPoints.java,3/5/358a5838b46a6c7d983e17841492421c254afc0d
+q
+Asrc/main/java/social/gripp/api/tasks/models/TaskTestingNotes.java,f/6/f67630b4506c5200093da24708e1de877ae603a9
