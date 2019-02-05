@@ -92,3 +92,7 @@ k
 ;src/main/java/social/gripp/api/tasks/models/TaskPoints.java,3/5/358a5838b46a6c7d983e17841492421c254afc0d
 q
 Asrc/main/java/social/gripp/api/tasks/models/TaskTestingNotes.java,f/6/f67630b4506c5200093da24708e1de877ae603a9
+p
+@src/main/java/social/gripp/api/tasks/TaskBranchFeignService.java,5/1/51086d0d97335e1102407110f84923203d0c6061
+o
+?src/main/java/social/gripp/api/global/models/git/GitBranch.java,3/3/33309d4c39c3f93cad1834ce11ff3f3e46b7b7c5
