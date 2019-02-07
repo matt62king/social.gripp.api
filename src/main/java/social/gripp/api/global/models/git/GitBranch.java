@@ -9,6 +9,7 @@ public class GitBranch implements Serializable {
     private String name;
     private String sha;
     private String branchFrom;
+    private String repoId;
 
     public String getName() {
         return name;
