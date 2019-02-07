@@ -5,10 +5,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import social.gripp.api.global.models.git.GitBranch;
+import social.gripp.api.global.models.git.GitRequest;
 
 @FeignClient(value = "tasks-server")
 public interface GitHubBranchProxyService {
 
     @PostMapping("api/v1/tasks/git/branch/create")
-    ResponseEntity<GitBranch> createBranch(@RequestBody GitBranch branch);
+    ResponseEntity<GitBranch> createBranch(@RequestBody GitRequest branch);
 }
