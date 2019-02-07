@@ -10,6 +10,7 @@ public class GitBranch implements Serializable {
     private String sha;
     private String branchFrom;
     private String repoId;
+    private String requestingUser;
 
     public String getName() {
         return name;
@@ -35,16 +36,34 @@ public class GitBranch implements Serializable {
         this.branchFrom = branchFrom;
     }
 
+    public String getRepoId() {
+        return repoId;
+    }
+
+    public void setRepoId(String repoId) {
+        this.repoId = repoId;
+    }
+
+    public String getRequestingUser() {
+        return requestingUser;
+    }
+
+    public void setRequestingUser(String requestingUser) {
+        this.requestingUser = requestingUser;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        GitBranch gitBranch = (GitBranch) o;
+        GitBranch branch = (GitBranch) o;
 
-        if (name != null ? !name.equals(gitBranch.name) : gitBranch.name != null) return false;
-        if (sha != null ? !sha.equals(gitBranch.sha) : gitBranch.sha != null) return false;
-        return branchFrom != null ? branchFrom.equals(gitBranch.branchFrom) : gitBranch.branchFrom == null;
+        if (name != null ? !name.equals(branch.name) : branch.name != null) return false;
+        if (sha != null ? !sha.equals(branch.sha) : branch.sha != null) return false;
+        if (branchFrom != null ? !branchFrom.equals(branch.branchFrom) : branch.branchFrom != null) return false;
+        if (repoId != null ? !repoId.equals(branch.repoId) : branch.repoId != null) return false;
+        return requestingUser != null ? requestingUser.equals(branch.requestingUser) : branch.requestingUser == null;
     }
 
     @Override
@@ -52,6 +71,8 @@ public class GitBranch implements Serializable {
         int result = name != null ? name.hashCode() : 0;
         result = 31 * result + (sha != null ? sha.hashCode() : 0);
         result = 31 * result + (branchFrom != null ? branchFrom.hashCode() : 0);
+        result = 31 * result + (repoId != null ? repoId.hashCode() : 0);
+        result = 31 * result + (requestingUser != null ? requestingUser.hashCode() : 0);
         return result;
     }
 
@@ -61,6 +82,8 @@ public class GitBranch implements Serializable {
                 "name='" + name + '\'' +
                 ", sha='" + sha + '\'' +
                 ", branchFrom='" + branchFrom + '\'' +
+                ", repoId='" + repoId + '\'' +
+                ", requestingUser='" + requestingUser + '\'' +
                 '}';
     }
 }
