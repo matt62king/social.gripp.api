@@ -96,3 +96,5 @@ p
 @src/main/java/social/gripp/api/tasks/TaskBranchFeignService.java,5/1/51086d0d97335e1102407110f84923203d0c6061
 o
 ?src/main/java/social/gripp/api/global/models/git/GitBranch.java,3/3/33309d4c39c3f93cad1834ce11ff3f3e46b7b7c5
+r
+Bsrc/main/java/social/gripp/api/tasks/GitHubBranchProxyService.java,4/3/432113b7843ffe8770cb53fa5d22fe2562db62fd
