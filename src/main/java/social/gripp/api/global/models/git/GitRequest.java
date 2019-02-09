@@ -8,6 +8,7 @@ public class GitRequest implements Serializable {
 
     private String requestingUser;
     private String repoId;
+    private String taskId;
     private String reference;
     private String sha;
 
@@ -25,6 +26,14 @@ public class GitRequest implements Serializable {
 
     public void setRepoId(String repoId) {
         this.repoId = repoId;
+    }
+
+    public String getTaskId() {
+        return taskId;
+    }
+
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
     }
 
     public String getReference() {
@@ -53,6 +62,7 @@ public class GitRequest implements Serializable {
         if (requestingUser != null ? !requestingUser.equals(that.requestingUser) : that.requestingUser != null)
             return false;
         if (repoId != null ? !repoId.equals(that.repoId) : that.repoId != null) return false;
+        if (taskId != null ? !taskId.equals(that.taskId) : that.taskId != null) return false;
         if (reference != null ? !reference.equals(that.reference) : that.reference != null) return false;
         return sha != null ? sha.equals(that.sha) : that.sha == null;
     }
@@ -61,6 +71,7 @@ public class GitRequest implements Serializable {
     public int hashCode() {
         int result = requestingUser != null ? requestingUser.hashCode() : 0;
         result = 31 * result + (repoId != null ? repoId.hashCode() : 0);
+        result = 31 * result + (taskId != null ? taskId.hashCode() : 0);
         result = 31 * result + (reference != null ? reference.hashCode() : 0);
         result = 31 * result + (sha != null ? sha.hashCode() : 0);
         return result;
@@ -71,6 +82,7 @@ public class GitRequest implements Serializable {
         return "GitRequest{" +
                 "requestingUser='" + requestingUser + '\'' +
                 ", repoId='" + repoId + '\'' +
+                ", taskId='" + taskId + '\'' +
                 ", reference='" + reference + '\'' +
                 ", sha='" + sha + '\'' +
                 '}';
