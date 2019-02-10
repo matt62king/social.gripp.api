@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import social.gripp.api.projects.models.ProjectLabel;
 import social.gripp.api.tasks.models.Task;
 import social.gripp.api.tasks.models.TaskAssign;
 import social.gripp.api.tasks.models.TaskBoard;
@@ -13,6 +14,8 @@ import social.gripp.api.tasks.models.TaskPoints;
 import social.gripp.api.tasks.models.TaskSprint;
 import social.gripp.api.tasks.models.TaskTestingNotes;
 import social.gripp.api.tasks.models.TaskTransition;
+
+import java.util.List;
 
 @FeignClient(value = "tasks-server")
 public interface TaskFeignService {
@@ -43,4 +46,7 @@ public interface TaskFeignService {
 
     @PutMapping("api/v1/tasks/testing-notes")
     ResponseEntity<Task> testingNotesUpdate(@RequestBody TaskTestingNotes taskTestingNotes);
+
+    @PutMapping("api/v1/tasks/labels")
+    ResponseEntity<Task> labelsUpdate(@RequestBody List<ProjectLabel> projectLabels);
 }

@@ -100,3 +100,5 @@ r
 Bsrc/main/java/social/gripp/api/tasks/GitHubBranchProxyService.java,4/3/432113b7843ffe8770cb53fa5d22fe2562db62fd
 p
 @src/main/java/social/gripp/api/global/models/git/GitRequest.java,5/f/5f9252e79d7d29f6a09e71da33df703d7a064d5b
+k
+;src/main/java/social/gripp/api/tasks/models/TaskBranch.java,2/f/2f31ca047d686d3b7afbcae023d9700405f9f7db
