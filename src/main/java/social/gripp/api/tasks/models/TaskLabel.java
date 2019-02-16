@@ -1,7 +1,5 @@
 package social.gripp.api.tasks.models;
 
-import social.gripp.api.projects.models.ProjectLabel;
-
 import java.io.Serializable;
 import java.util.List;
 
@@ -10,7 +8,8 @@ public class TaskLabel implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String taskId;
-    private List<ProjectLabel> labels;
+    private List<String> addingLabels;
+    private List<String> removingLabels;
 
     public String getTaskId() {
         return taskId;
@@ -20,12 +19,20 @@ public class TaskLabel implements Serializable {
         this.taskId = taskId;
     }
 
-    public List<ProjectLabel> getLabels() {
-        return labels;
+    public List<String> getAddingLabels() {
+        return addingLabels;
     }
 
-    public void setLabels(List<ProjectLabel> labels) {
-        this.labels = labels;
+    public void setAddingLabels(List<String> addingLabels) {
+        this.addingLabels = addingLabels;
+    }
+
+    public List<String> getRemovingLabels() {
+        return removingLabels;
+    }
+
+    public void setRemovingLabels(List<String> removingLabels) {
+        this.removingLabels = removingLabels;
     }
 
     @Override
@@ -36,13 +43,16 @@ public class TaskLabel implements Serializable {
         TaskLabel taskLabel = (TaskLabel) o;
 
         if (taskId != null ? !taskId.equals(taskLabel.taskId) : taskLabel.taskId != null) return false;
-        return labels != null ? labels.equals(taskLabel.labels) : taskLabel.labels == null;
+        if (addingLabels != null ? !addingLabels.equals(taskLabel.addingLabels) : taskLabel.addingLabels != null)
+            return false;
+        return removingLabels != null ? removingLabels.equals(taskLabel.removingLabels) : taskLabel.removingLabels == null;
     }
 
     @Override
     public int hashCode() {
         int result = taskId != null ? taskId.hashCode() : 0;
-        result = 31 * result + (labels != null ? labels.hashCode() : 0);
+        result = 31 * result + (addingLabels != null ? addingLabels.hashCode() : 0);
+        result = 31 * result + (removingLabels != null ? removingLabels.hashCode() : 0);
         return result;
     }
 
@@ -50,7 +60,8 @@ public class TaskLabel implements Serializable {
     public String toString() {
         return "TaskLabel{" +
                 "taskId='" + taskId + '\'' +
-                ", labels=" + labels +
+                ", addingLabels=" + addingLabels +
+                ", removingLabels=" + removingLabels +
                 '}';
     }
 }
