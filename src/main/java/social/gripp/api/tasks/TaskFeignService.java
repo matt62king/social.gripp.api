@@ -10,6 +10,7 @@ import social.gripp.api.tasks.models.Task;
 import social.gripp.api.tasks.models.TaskAssign;
 import social.gripp.api.tasks.models.TaskBoard;
 import social.gripp.api.tasks.models.TaskDescription;
+import social.gripp.api.tasks.models.TaskLabel;
 import social.gripp.api.tasks.models.TaskPoints;
 import social.gripp.api.tasks.models.TaskSprint;
 import social.gripp.api.tasks.models.TaskTestingNotes;
@@ -48,5 +49,5 @@ public interface TaskFeignService {
     ResponseEntity<Task> testingNotesUpdate(@RequestBody TaskTestingNotes taskTestingNotes);
 
     @PutMapping("api/v1/tasks/labels")
-    ResponseEntity<Task> labelsUpdate(@RequestBody List<ProjectLabel> projectLabels);
+    ResponseEntity<Task> labelsUpdate(@RequestBody TaskLabel taskLabel);
 }
