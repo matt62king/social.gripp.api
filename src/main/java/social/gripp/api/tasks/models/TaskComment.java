@@ -1,3 +1,4 @@
+
 package social.gripp.api.tasks.models;
 
 import java.io.Serializable;
@@ -7,6 +8,7 @@ public class TaskComment implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String id;
+    private String taskId;
     private String author;
     private String comment;
     private String responseTo;
@@ -17,6 +19,14 @@ public class TaskComment implements Serializable {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getTaskId() {
+        return taskId;
+    }
+
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
     }
 
     public String getAuthor() {
@@ -51,6 +61,7 @@ public class TaskComment implements Serializable {
         TaskComment that = (TaskComment) o;
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
+        if (taskId != null ? !taskId.equals(that.taskId) : that.taskId != null) return false;
         if (author != null ? !author.equals(that.author) : that.author != null) return false;
         if (comment != null ? !comment.equals(that.comment) : that.comment != null) return false;
         return responseTo != null ? responseTo.equals(that.responseTo) : that.responseTo == null;
@@ -59,6 +70,7 @@ public class TaskComment implements Serializable {
     @Override
     public int hashCode() {
         int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (taskId != null ? taskId.hashCode() : 0);
         result = 31 * result + (author != null ? author.hashCode() : 0);
         result = 31 * result + (comment != null ? comment.hashCode() : 0);
         result = 31 * result + (responseTo != null ? responseTo.hashCode() : 0);
@@ -69,6 +81,7 @@ public class TaskComment implements Serializable {
     public String toString() {
         return "TaskComment{" +
                 "id='" + id + '\'' +
+                ", taskId='" + taskId + '\'' +
                 ", author='" + author + '\'' +
                 ", comment='" + comment + '\'' +
                 ", responseTo='" + responseTo + '\'' +
