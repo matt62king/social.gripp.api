@@ -118,3 +118,7 @@ i
 9src/main/java/social/gripp/api/tasks/models/BulkTask.java,2/3/2354fe0acb6248c348b01f6ec6cbe60a52f63b4c
 n
 >src/main/java/social/gripp/api/tasks/BulkTaskFeignService.java,4/d/4db37045b4030d5e6298f6d045778258511d3235
+l
+<src/main/java/social/gripp/api/tasks/models/TaskComment.java,a/8/a82bab7888e55d66fb108e78cb3b97b734102ee4
+q
+Asrc/main/java/social/gripp/api/tasks/TaskCommentFeignService.java,b/d/bd08d0763e6b74b76b84765db9714d0ae0bb16bb
