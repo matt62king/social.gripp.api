@@ -19,6 +19,6 @@ public interface TaskCommentFeignService {
     @PutMapping("api/v1/tasks/comment/update")
     ResponseEntity<TaskComment> updateTaskComment(@RequestBody TaskComment taskComment);
 
-    @DeleteMapping("api/v1/comment/delete/{id}")
+    @DeleteMapping("api/v1/tasks/comment/delete/{id}")
     ResponseEntity<BooleanResponse> deleteTaskComment(@PathVariable("id") String taskId);
 }
