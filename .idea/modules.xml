@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/social.gripp.api.iml" filepath="$PROJECT_DIR$/.idea/modules/social.gripp.api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/social.gripp.api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/social.gripp.api_main.iml" group="social.gripp.api" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/social.gripp.api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/social.gripp.api_test.iml" group="social.gripp.api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/social.gripp.api.social.gripp.api.iml" filepath="$PROJECT_DIR$/.idea/modules/social.gripp.api.social.gripp.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/social.gripp.api.social.gripp.api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/social.gripp.api.social.gripp.api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/social.gripp.api.social.gripp.api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/social.gripp.api.social.gripp.api.test.iml" />
     </modules>
   </component>
 </project>

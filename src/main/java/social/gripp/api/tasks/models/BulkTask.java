@@ -2,6 +2,7 @@ package social.gripp.api.tasks.models;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Objects;
 
 public class BulkTask implements Serializable {
 
@@ -9,6 +10,7 @@ public class BulkTask implements Serializable {
 
     private Task task;
     private List<String> projectLabels;
+    private List<TaskLinker> taskLinkers;
 
     public Task getTask() {
         return task;
@@ -26,22 +28,27 @@ public class BulkTask implements Serializable {
         this.projectLabels = projectLabels;
     }
 
+    public List<TaskLinker> getTaskLinkers() {
+        return taskLinkers;
+    }
+
+    public void setTaskLinkers(List<TaskLinker> taskLinkers) {
+        this.taskLinkers = taskLinkers;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         BulkTask bulkTask = (BulkTask) o;
-
-        if (task != null ? !task.equals(bulkTask.task) : bulkTask.task != null) return false;
-        return projectLabels != null ? projectLabels.equals(bulkTask.projectLabels) : bulkTask.projectLabels == null;
+        return Objects.equals(task, bulkTask.task) &&
+                Objects.equals(projectLabels, bulkTask.projectLabels) &&
+                Objects.equals(taskLinkers, bulkTask.taskLinkers);
     }
 
     @Override
     public int hashCode() {
-        int result = task != null ? task.hashCode() : 0;
-        result = 31 * result + (projectLabels != null ? projectLabels.hashCode() : 0);
-        return result;
+        return Objects.hash(task, projectLabels, taskLinkers);
     }
 
     @Override
@@ -49,6 +56,7 @@ public class BulkTask implements Serializable {
         return "BulkTask{" +
                 "task=" + task +
                 ", projectLabels=" + projectLabels +
+                ", taskLinkers=" + taskLinkers +
                 '}';
     }
 }

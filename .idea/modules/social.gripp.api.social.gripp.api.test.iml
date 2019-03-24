@@ -8,13 +8,10 @@
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output-test url="file://$MODULE_DIR$/../../out/test/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../src/test">
-      <sourceFolder url="file://$MODULE_DIR$/../../src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../src/test/resources" type="java-test-resource" />
-    </content>
+    <content url="file://$MODULE_DIR$/../../src/test" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="social.gripp.api_main" />
+    <orderEntry type="module" module-name="social.gripp.api.social.gripp.api.main" />
     <orderEntry type="library" name="Gradle: org.springframework.cloud:spring-cloud-starter-feign:1.4.5.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.cloud:spring-cloud-starter-openfeign:1.4.5.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.cloud:spring-cloud-starter:1.3.4.RELEASE" level="project" />
@@ -89,5 +86,5 @@
     <orderEntry type="library" name="Gradle: com.google.code.findbugs:jsr305:3.0.1" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.25" level="project" />
   </component>
-  <component name="TestModuleProperties" production-module="social.gripp.api_main" />
+  <component name="TestModuleProperties" production-module="social.gripp.api.social.gripp.api.main" />
 </module>
